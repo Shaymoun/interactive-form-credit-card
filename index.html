@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <picture>
+        <source media="(min-width:768px)" srcset="./images/bg-main-desktop.png">
+        <img src="./images/bg-main-mobile.png" alt="gradient background">
+      </picture>
+      <div class="card__one">
+        <img src="./images/bg-card-back.png" alt="card back">
+        <span class="card__cvc"></span>
+      </div>
+      <div class="card__two">
+        <img src="./images/bg-card-front.png" alt="card front">
+        <img id="card__logo" src="./images/card-logo.svg" alt="card logo">
+        <p class="card__number"></p>
+        <span class="card__name"></span>
+        <div class="card__date"></div>
+      </div>
+    </header>
+
+    <form class="form-container">
+      <div class="card__details">
+        <div class="card-name-container">
+          <label for="card-name">Cardholder Name</label>
+          <input type="text" placeholder="e.g. Jane Appleseed" id="card-name" maxlength="50">
+          <p class="error error-name">Can't be blank</p>
+        </div>
+        <div class="card-number-container">
+          <label for="card-number">Card Number</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-number" maxlength="19">
+          <p class="error error-numbers">Wrong format, numbers only</p>
+        </div>
+        <div class="card-data">
+          <div class="card-date-container">
+            <label for="card-month">Exp. Date (MM/YY)</label>
+            <input type="text" placeholder="MM" id="card-month" maxlength="2">
+            <input type="text" placeholder="YY" id="card-year" maxlength="2">
+            <p class="error error-date">Can't be blank</p>
+          </div>
+          <div class="card-cvc-container">
+            <label for="card-cvc">CVC</label>
+            <input type="text" placeholder="e.g. 123" id="card-cvc" maxlength="3">
+            <p class="error error-cvc">Can't be blank</p>
+          </div>
+        </div>
+        <button>Confirm</button>
+      </div>
+    </form>
+    <div class="card__details thank">
+      <img src="./images/icon-complete.svg" alt="" class="thank-logo">
+      <h1 class="thank-title">Thank you!</h1>
+      <p class="thank-text">We've added your card details</p>
+      <button class="reset">Continue</button>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Shaymoun</a>.
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
