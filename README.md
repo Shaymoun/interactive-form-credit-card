@@ -1,2 +1,2 @@
 # interactive-form-credit-card
-live demo:
+live demo: https://shaymoun.github.io/interactive-form-credit-card/
